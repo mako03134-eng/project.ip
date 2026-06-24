@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>관리자 패널</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; background: #f5f5f5; }
+  h1 { color: #333; }
+  .table-container { width: 100%; overflow-x: auto; background: white; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+  table { width: 100%; border-collapse: collapse; min-width: 1400px; }
+  th, td { border: 1px solid #ddd; padding: 12px; text-align: left; font-size: 13px; vertical-align: top; }
+  th { background-color: #2c3e50; color: white; white-space: nowrap; }
+  tr:nth-child(even) { background-color: #f9f9f9; }
+  tr:hover { background-color: #f1f1f1; }
+  
+  .small-text { font-size: 11px; color: #555; word-break: break-all; max-width: 250px; }
+  .alert-text { color: #e74c3c; font-weight: bold; }
+  .highlight { font-weight: bold; color: #2980b9; }
+</style>
+</head>
+<body>
+
+<h1>접속 기록 관리자 패널</h1>
+<div id="total-count" style="font-weight: bold; margin-bottom: 10px;">총 기록: 로딩 중...</div>
+
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>시간 / IP 주소</th>
+        <th>위치 (위경도 / 한글 주소)</th>
+        <th>이동 정보 (속도/방향/고도)</th>
+        <th>운영체제 및 기기 정보</th>
+        <th>화면 및 네트워크 환경</th>
+        <th>유입 경로 (Referrer & URL)</th>
+      </tr>
+    </thead>
+    <tbody id="log-table">
+    </tbody>
+  </table>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
